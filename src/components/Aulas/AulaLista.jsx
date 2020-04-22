@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, View, Text, Image } from 'react-native';
 import axios from 'axios';
 import AulaLinha from './AulaLinha';
 
