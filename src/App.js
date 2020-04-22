@@ -1,19 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Inicio from './components/Inicio/Inicio';
+import AulaLista from './components/Aulas/AulaLista';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const Stack = createStackNavigator();
+const App = () => (
+  <NavigationContainer>
+    <Stack.Navigator initialRouteName='Home'>
+      <Stack.Screen name='Home' component={Inicio} />
+      <Stack.Screen
+        name='AulaLista'
+        component={AulaLista}
+        options={{
+          title: 'AULAS',
+          headerStyle: { backgroundColor: '#004897' },
+          headerTintColor: '#FFF',
+          headerTitleAlign: 'center',
+        }}
+      />
+    </Stack.Navigator>
+  </NavigationContainer>
+);
+export default App;
