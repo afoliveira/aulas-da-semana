@@ -17,13 +17,13 @@ export default function AulaLinha(props) {
         'Domingo',
         'Segunda-feira',
         'Terça-feira',
-        'QUarta-feira',
+        'Quarta-feira',
         'Quinta-feira',
         'Sexta-Feira',
         'Sábado',
       ];
       const titulo = `${
-        nomeDia[dataTitulo.getDay()]
+        nomeDia[linha.aulas[0].diaSemana]
       } >> ${dataTitulo.getDate()}/${dataTitulo.getMonth()}/${dataTitulo.getFullYear()} >> ${
         linha.turno
       }`;
