@@ -43,9 +43,7 @@ export default function AulaLista() {
   if (lista.length > 0) {
     return (
       <View>
-        <Text style={styles.separador}>
-          COL EST DO CAMPO CARLOS HUMBERTO DE MIRANDA PEREIRA MELLO
-        </Text>
+        <Text style={styles.separador}>{lista[0].escola}</Text>
         <View style={[styles.body, styles.sombra]}>
           {CabecalhoLista()}
           <AulaLinha aulas={lista} />
